@@ -16,6 +16,9 @@ html {
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1,
@@ -42,7 +45,6 @@ ol {
   align-items: flex-end;
   grid-template-columns: 711px 399px;
   gap: 30px;
-  padding: 133px 30px;
   inline-size: 1140px;
 }
 .search-form {
@@ -72,7 +74,7 @@ ol {
   position: relative;
   width: 711px;
   height: 386px;
-  margin-bottom: 16px;
+  
 }
 .result__video {
   width: 100%;
@@ -90,13 +92,14 @@ ol {
 }
 .content__video-card-description-container {
   flex-grow: 1;
-  overflow: hidden;
+  max-width: 195px;
 }
 .content__video-card-thumbnail {
   width: 194px;
   height: 103px;
   object-fit: cover;
   object-position: center;
+  flex-shrink: 0;
 }
 .search-form__fieldset-title {
   font-size: 18px;
@@ -117,6 +120,9 @@ ol {
   text-decoration: none;
   color: inherit;
 }
+.content__card-link:active {
+  background-color: #545050;
+}
 .content__video-card-title {
   font-family: "Oswald", sans-serif;
   font-size: 30px;
@@ -125,7 +131,9 @@ ol {
   line-height: 30px;
   padding-bottom: 6px;
   overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
+
 }
 .content__video-card-description {
   line-height: 16.2px;
@@ -185,7 +193,7 @@ ol {
   height: 15px;
   background-color: #fff;
 }
-.search-form__label:focus {
+.search-form__label{
   outline: none;
 }
 
@@ -198,7 +206,7 @@ ol {
   text-decoration: underline;
   text-underline-offset: 3px;
 }
-button {
+.button {
   border: 1px solid #fff;
   color: #fff;
   font-family: inherit;
@@ -207,17 +215,17 @@ button {
   cursor: pointer;
   padding: 5px 0;
   font-size: inherit;
-}
-.search-form__submit-button {
   display: flex;
   align-self: flex-end;
   justify-content: center;
   min-height: 34px;
-  min-width: 194px;
+  
+}
+.search-form__submit-button {
+ min-width: 194px;
 }
 .more-button {
   width: 100%;
-  min-height: 34px;
   margin-top: 30px;
 }
 .button:focus {
@@ -232,6 +240,7 @@ button {
 
 .button:focus-visible {
   outline: 1px solid #fff;
+  outline-offset: 1px;
 }
 .content__card-link {
   display: block;
@@ -245,11 +254,11 @@ button {
 }
 .content__card-link:hover {
   text-decoration: underline;
-  text-underline-offset: 6px;
 }
 
 .content__card-link:focus-visible {
   outline: 1px solid #fff;
+  outline-offset: 1px;
 }
 .content__list-item {
   padding-left: 3px;
