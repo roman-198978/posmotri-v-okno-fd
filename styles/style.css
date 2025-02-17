@@ -74,7 +74,6 @@ ol {
   position: relative;
   width: 711px;
   height: 386px;
-  
 }
 .result__video {
   width: 100%;
@@ -133,7 +132,6 @@ ol {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-
 }
 .content__video-card-description {
   line-height: 16.2px;
@@ -193,7 +191,7 @@ ol {
   height: 15px;
   background-color: #fff;
 }
-.search-form__label{
+.search-form__label {
   outline: none;
 }
 
@@ -219,10 +217,9 @@ ol {
   align-self: flex-end;
   justify-content: center;
   min-height: 34px;
-  
 }
 .search-form__submit-button {
- min-width: 194px;
+  min-width: 194px;
 }
 .more-button {
   width: 100%;
